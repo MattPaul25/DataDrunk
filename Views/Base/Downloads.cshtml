@@ -1,0 +1,29 @@
+﻿<h1>  @ViewBag.Title </h1>
+
+
+        @{
+            DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/ExcelFiles/"));
+            var files = directory.GetFiles();
+            int count = 0;
+            string btnClass = "btn btn-success";
+            foreach (var fil in files)
+            {
+                count++;
+                int div = count / 2;
+                if ((div * 2) == count)
+                {
+                    btnClass = "btn btn-info";
+                }
+                else
+                {
+                    btnClass = "btn btn-default";
+                }
+               string myFile = fil.ToString();
+              <a class="@btnClass" href="~/Content/ExcelFiles/@myFile" download>@myFile</a>
+              <p>.</p>
+
+                string myOldfile = myFile;
+            }
+        }
+
+<a class=btn
