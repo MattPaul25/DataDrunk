@@ -166,6 +166,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DownloadsModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,34 +183,34 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\ExcelFiles\Array 1 - Formula to perform fuzzy search on data.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 2 - Formula to pull UNIQUE values from Duplicates.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 3 - Formula to RESORT items to bottom of list for Data Validation.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 4 - Formula To Show Items NOT in List.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 5 - Formula to Alphabetize a list.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 6 -Formula to Resort List from Highest to Lowerst.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 7 - Formula to get rid of blanks.xlsx" />
-    <Content Include="Content\ExcelFiles\Array 8 - Formula to Remove Duplicates and Sort by the Summation of Values.xlsx" />
-    <Content Include="Content\ExcelFiles\Create a Search FAQ1.xlsm" />
-    <Content Include="Content\ExcelFiles\Create a Search FAQ2.xlsx" />
-    <Content Include="Content\ExcelFiles\Create a Search FAQ3.xlsm" />
-    <Content Include="Content\ExcelFiles\Create a Search FAQ3.xlsx" />
-    <Content Include="Content\ExcelFiles\CreateYourDrillDown.xlsx" />
-    <Content Include="Content\ExcelFiles\CurrentUDFs.xlsm" />
-    <Content Include="Content\ExcelFiles\ExcelSearch1.xlsx" />
-    <Content Include="Content\ExcelFiles\ExcelSearch2.xlsx" />
-    <Content Include="Content\ExcelFiles\ExcelSearch3.xlsx" />
-    <Content Include="Content\ExcelFiles\ExcelSearch4.xlsx" />
-    <Content Include="Content\ExcelFiles\ExcelSearch5.xlsx" />
-    <Content Include="Content\ExcelFiles\UDF1 - Concatenate Range.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF2 - SearchInstance.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF3 - InRange.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF4 - CountString.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF5 - ConcatIf.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF6 - ConcatUnique.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF7 - SplitUp.xlsm" />
-    <Content Include="Content\ExcelFiles\UDF8 - RegExGet.xlsm" />
-    <Content Include="Content\ExcelFiles\VBA_Search.xlsm" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 1 - Formula to perform fuzzy search on data.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 2 - Formula to pull UNIQUE values from Duplicates.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 3 - Formula to RESORT items to bottom of list for Data Validation.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 4 - Formula To Show Items NOT in List.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 5 - Formula to Alphabetize a list.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 6 -Formula to Resort List from Highest to Lowerst.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 7 - Formula to get rid of blanks.xlsx" />
+    <Content Include="Content\Downloads\ArrayFunctions\Array 8 - Formula to Remove Duplicates and Sort by the Summation of Values.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearchFAQ\Create a Search FAQ1.xlsm" />
+    <Content Include="Content\Downloads\FuzzySearchFAQ\Create a Search FAQ2.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearchFAQ\Create a Search FAQ3.xlsm" />
+    <Content Include="Content\Downloads\FuzzySearchFAQ\Create a Search FAQ3.xlsx" />
+    <Content Include="Content\Downloads\DrillDown\CreateYourDrillDown.xlsx" />
+    <Content Include="Content\Downloads\UDF\CurrentUDFs.xlsm" />
+    <Content Include="Content\Downloads\FuzzySearch\ExcelSearch1.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearch\ExcelSearch2.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearch\ExcelSearch3.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearch\ExcelSearch4.xlsx" />
+    <Content Include="Content\Downloads\FuzzySearch\ExcelSearch5.xlsx" />
+    <Content Include="Content\Downloads\UDF\UDF1 - Concatenate Range.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF2 - SearchInstance.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF3 - InRange.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF4 - CountString.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF5 - ConcatIf.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF6 - ConcatUnique.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF7 - SplitUp.xlsm" />
+    <Content Include="Content\Downloads\UDF\UDF8 - RegExGet.xlsm" />
+    <Content Include="Content\Downloads\FuzzySearchFAQ\VBA_Search.xlsm" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -222,7 +223,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

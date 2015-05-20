@@ -50,6 +50,6 @@ c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\bin\Microsoft.Owin
 c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\bin\Microsoft.Owin.Security.Google.xml
 c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\bin\Microsoft.Owin.Security.Twitter.xml
 c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\obj\Debug\DataDrunk.csprojResolveAssemblyReference.cache
 c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\obj\Debug\DataDrunk.dll
 c:\users\matt\documents\visual studio 2013\Projects\DataDrunk\obj\Debug\DataDrunk.pdb
+C:\Users\Matt\documents\visual studio 2013\Projects\DataDrunk\obj\Debug\DataDrunk.csprojResolveAssemblyReference.cache

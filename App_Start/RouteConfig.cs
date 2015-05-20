@@ -16,8 +16,8 @@ namespace DataDrunk
 
             routes.MapRoute(
               name: "Downloads",
-              url: "Downloads/{style}",
-              defaults: new { controller = "Base", action = "Downloads", style = "glitter" }
+              url: "Base/Downloads/{direct}",
+              defaults: new { controller = "Base", action = "Downloads", direct = "" }
                 );
 
             routes.MapRoute(

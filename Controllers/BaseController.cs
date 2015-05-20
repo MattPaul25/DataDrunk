@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataDrunk.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,24 +41,25 @@ namespace DataDrunk.Controllers
         [HttpPost]
         public ActionResult Contact(string message)
         {
-            ViewBag.Message = "Thank You for submitting that your message. \n I'll do my best to get to it.";            
+            ViewBag.Message = "Thank You for submitting your message.";            
              return View();
             
         }
-        public ActionResult Downloads(string style)
+        public ActionResult Downloads(string direct)
         {
-            ViewBag.Title = "Downloads";
-            ViewBag.Message = "Download all files from my Youtube Series";
 
-            if (style != null && style.ToLower() == raw)
+            if(direct != null || direct != "")
             {
-                return PartialView();
+                ViewBag.Direct = direct;
+                return View();
             }
             else
             {
+                ViewBag.Direct = "";
                 return View();
-            }            
+            }
         }
+       
         public ActionResult Home(string style)
         {
 

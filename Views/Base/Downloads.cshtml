@@ -1,9 +1,31 @@
-﻿<h1>  @ViewBag.Title </h1>
+﻿@model DataDrunk.Models.DownloadsModels
 
 
-        @{
-            DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/ExcelFiles/"));
-            var files = directory.GetFiles();
+
+    <h1>Downloads</h1>
+    @{
+        var myList = new List<SelectListItem>();
+            DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/Downloads/"));
+            var direcs = directory.GetDirectories();
+            foreach (var direc in direcs)
+            {
+                string myDirectory = direc.ToString();
+                string btn = "btn btn-default";
+                if (ViewBag.Direct == myDirectory)
+                {
+                    btn = "btn btn-success";
+                }
+
+                <text><a class="@btn" @Html.ActionLink(myDirectory, "Downloads/" + myDirectory) </text>   
+            }  
+    }
+ <br /><br />
+    @{
+        if (ViewBag.Direct != "")
+        {
+            string repo = ViewBag.Direct;
+            DirectoryInfo deepDirectory = new DirectoryInfo(Server.MapPath("~/Content/Downloads/" + repo + "/"));
+            var files = deepDirectory.GetFiles();
             int count = 0;
             string btnClass = "btn btn-success";
             foreach (var fil in files)
@@ -16,14 +38,17 @@
                 }
                 else
                 {
-                    btnClass = "btn btn-default";
+                    btnClass = "btn btn-success";
                 }
-               string myFile = fil.ToString();
-              <a class="@btnClass" href="~/Content/ExcelFiles/@myFile" download>@myFile</a>
-              <p>.</p>
+                string myFile = fil.ToString();
+                <a class="@btnClass" href="~/Content/Downloads/@repo/@myFile" download>@myFile</a>
 
-                string myOldfile = myFile;
             }
         }
+    }
 
-<a class=btn
+   
+
+
+
+
