@@ -59,19 +59,7 @@ namespace DataDrunk.Controllers
                 return View();
             }
         }
-       
-        public ActionResult Home(string style)
-        {
-
-            if (style != null && style.ToLower() == raw)
-            {
-                return PartialView();
-            }
-            else
-            {
-                return View();
-            }
-        }
+      
         public ActionResult Index(string style)
         {
             if (style != null && style.ToLower() == raw)

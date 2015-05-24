@@ -35,14 +35,8 @@ namespace DataDrunk
 
             routes.MapRoute(
              name: "Contact",
-             url: "Contact/{style}",
-            defaults: new { controller = "Base", action = "Contact", style = "glitter" }
-                );
-
-            routes.MapRoute(
-                name: "Home",
-                url: "Home/{style}",
-               defaults: new { controller = "Base", action = "Home", style = "glitter" }
+             url: "Contact",
+            defaults: new { controller = "Contact", action = "Create", style = "glitter" }
                 );
 
             routes.MapRoute(
@@ -51,6 +45,12 @@ namespace DataDrunk
                 defaults: new { controller = "Base", action = "About", style = "glitter" }
                 );
            
+            routes.MapRoute(
+                name: "Home",
+                url: "Home/{style}",
+               defaults: new { controller = "Base", action = "Index", style = "glitter" }
+                );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

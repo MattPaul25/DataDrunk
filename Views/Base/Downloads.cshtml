@@ -1,8 +1,5 @@
-﻿@model DataDrunk.Models.DownloadsModels
-
-
-
-    <h1>Downloads</h1>
+﻿
+ <h1><b>Find the playlist (or category) that you would like to download from.. </b></h1>
     @{
         var myList = new List<SelectListItem>();
             DirectoryInfo directory = new DirectoryInfo(Server.MapPath("~/Content/Downloads/"));
@@ -16,9 +13,7 @@
                     btn = "btn btn-success";
                 }
 
-                <text><a class="@btn" @Html.ActionLink(myDirectory, "Downloads/" + myDirectory) </text>   
-            }  
-    }
+                <text><a  class="@btn" @Html.ActionLink(myDirectory, "Downloads/" + myDirectory) </text>      }   }
  <br /><br /><br />
     @{
         if (ViewBag.Direct != "")
@@ -41,13 +36,12 @@
                     btnClass = "btn btn-success";
                 }
                 string myFile = fil.ToString();
-                <a class="@btnClass" href="~/Content/Downloads/@repo/@myFile" download>@myFile</a>
-
+                <a class="@btnClass" href="~/Content/Downloads/@repo/@myFile" download><span class="glyphicon glyphicon-circle-arrow-down"></span> @myFile</a>
             }
         }
     }
 
-   
+
 
 
 

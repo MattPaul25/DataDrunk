@@ -2,53 +2,23 @@
     ViewBag.Title = "DataDrunk|Home";
 }
 
-<div class="jumbotron">
-    <h1>Home</h1>
-    <p class="lead">Welcome to DataDrunk - A website designated to solving complex problems with fun solutions.</p>
-</div>
+<br />
+<br />
+   <h1><b>A website designated to solving complex problems with fun solutions, probably...</b></h1>
+<br />
+<br />
 <div class="row">
     <div class="btn-toolbar">
-        <div class="col-md-3">
-            <p><a class="btn btn-default" @Html.ActionLink("Apps!", "Apps", "Apps")</a></p>
+        <div class="col-md-4" align="center">
+            <p><a class="btn btn-primary" @Html.ActionLink("Apps!", "Apps", "Apps")</a></p>
         </div>
-         <div class="col-md-3">
-             <p><a class="btn btn-default" @Html.ActionLink("Downloads", "Downloads", "Base")</a></p>
-         </div>
-         <div class="col-md-3">
-             <p><a class="btn btn-default" @Html.ActionLink("Contact", "Contact", "Base") </a></p>
-         </div>
-         <div class="col-md-3">
-             <p><a class="btn btn-default" @Html.ActionLink("Test", "Contact", "Base")</a></p>
-         </div>
+        <div class="col-md-4" align="center">
+            <p><a class="btn btn-primary" @Html.ActionLink("Downloads", "Downloads", "Base")</a></p>
+        </div>
+         <div class="col-md-4" align="center">
+             <p><a class="btn btn-primary" @Html.ActionLink("Contact", "Create", "Contact") </a></p>
+         </div>        
      </div>
 </div>
 <br />
 <br />
-<div class="bottom">
-        <a href="https://twitter.com/MattPaul25" class="twitter-follow-button" data-show-count="false" data-size="large">Follow MattPaul25</a>
-        <script>
-            !function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id; js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'twitter-wjs');
-        </script>
-<p></p>
-<p></p>
-        <script src="https://apis.google.com/js/platform.js"></script>
-        <div 
-             class="g-ytsubscribe" data-channel="YourXLNerd" data-layout="full" data-count="default">
-        </div>
-<p></p>
-<p></p>
-    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/pub/matt-farguson/35/790/620" data-format="hover" data-related="false" data-text="Matt Farguson">
-    </script>
-<p></p>
-<p></p>
-    <iframe src="https://ghbtns.com/github-btn.html?user=MattPaul25&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
- </div>
