@@ -6,15 +6,14 @@ using System.Web;
 
 namespace DataDrunk.Models
 {
-    public class myDBContext : DbContext
+    public class MyDbContext : DbContext
     {
-        public DbSet<ContactModels> Contacts { get; set; }
-        public myDBContext()
-            : base("DataDrunk")
+        public MyDbContext()
+            : base("DataDrunk_Db")
         {
 
         }
-        
-       
+
+        public DbSet<MessageModel> Message { get; set; }
     }
 }

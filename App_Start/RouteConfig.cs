@@ -23,7 +23,7 @@ namespace DataDrunk
             routes.MapRoute(
                 //routes to app controller instead of home controller
               name: "Apps",
-              url: "Apps/{style}",
+              url: "Apps/{action}",
               defaults: new { controller = "Apps", action = "Index", style = "glitter" }
                 );
 
@@ -36,7 +36,7 @@ namespace DataDrunk
             routes.MapRoute(
              name: "Contact",
              url: "Contact",
-            defaults: new { controller = "Contact", action = "Create", style = "glitter" }
+            defaults: new { controller = "Contact", action = "Details", style = "glitter" }
                 );
 
             routes.MapRoute(

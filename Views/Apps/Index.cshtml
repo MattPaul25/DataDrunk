@@ -1,7 +1,26 @@
 ﻿
+@{
+    ViewBag.Title = "Apps|Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
- <h1><b>\\TO-DO: Apps.</b></h1><
+<h2>Apps Home</h2>
 
-
-
+<br />
+<br />
+<div class="row">
+    <div class="btn-toolbar">
+        <div class="col-md-4" align="center">
+            <p><a class="btn btn-info btn-lg glyphicon glyphicon glyphicon-eye-close" @Html.ActionLink(" Cipher", "Cipher", "Apps")  </a></p>
+        </div>
+        <div class="col-md-4" align="center">
+            <p><a class="btn btn-info btn-lg glyphicon glyphicon-signal" @Html.ActionLink(" TwitterMash", "Twitter", "Apps")</a></p>
+        </div>
+        <div class="col-md-4 " align="center">
+            <p><a class="btn btn-info btn-lg  glyphicon glyphicon-fire" @Html.ActionLink(" CommentFlame", "Index", "Apps") </a></p>
+        </div>
+    </div>
+</div>
+<br />
+<br />
 

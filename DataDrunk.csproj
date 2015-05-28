@@ -161,16 +161,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AppsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Models\ContactModels.cs" />
+    <Compile Include="Models\Apps.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\myDBContext.cs" />
+    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -264,12 +265,14 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Base\Downloads.cshtml" />
     <Content Include="Views\Apps\TwitterViewer.cshtml" />
-    <Content Include="Views\Apps\Index.cshtml" />
+    <Content Include="Views\Contact\Details.cshtml" />
     <Content Include="Views\Contact\Create.cshtml" />
+    <Content Include="Views\Contact\Submitted.cshtml" />
+    <Content Include="Views\Apps\Index.cshtml" />
+    <Content Include="Views\Apps\Cipher.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Downloads\TestNick\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

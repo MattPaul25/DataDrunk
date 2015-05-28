@@ -1,14 +1,16 @@
-﻿using System;
+﻿using DataDrunk.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace DataDrunk.Models
+namespace DataDrunk.Controllers
 {
     public class ContactController : Controller
     {
-        private myDBContext db = new myDBContext();
+        private MyDbContext db = new MyDbContext();
+
         // GET: Contact
         public ActionResult Index()
         {
@@ -16,34 +18,39 @@ namespace DataDrunk.Models
         }
 
         // GET: Contact/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
-            return View();
+            //todo: make work
+            var x = new DataDrunk.Models.MessageModel { Email = "test", Id = 1, Message = "hello", Name = "Matt" };
+            return View(x);
         }
 
         // GET: Contact/Create
         public ActionResult Create()
         {
-
             return View();
         }
 
         // POST: Contact/Create
         [HttpPost]
-        public ActionResult Create(ContactModels contact)
+        public ActionResult Create(MessageModel myMessage)
         {
-            //working out issue of database creation
-
-         
-                db.Contacts.Add(contact);
+            //try
+            //{
+                db.Message.Add(myMessage);
                 db.SaveChanges();
 
-                return View();
-            
+                return RedirectToAction("Submitted");
+            //}
             //catch
             //{
             //    return View();
             //}
+        }
+        public ActionResult Submitted()
+        {
+            ViewBag.Message = "Thank you for submitting your question.";
+            return View();
         }
 
         // GET: Contact/Edit/5

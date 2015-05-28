@@ -25,5 +25,10 @@ namespace DataDrunk.Controllers
                 return View();
             }
         }
+        public ActionResult Cipher()
+        {
+            //update view with form that will work for a cipher
+            return View();
+        }
     }
 }
