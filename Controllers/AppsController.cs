@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataDrunk.Applications;
+using DataDrunk.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,6 +30,16 @@ namespace DataDrunk.Controllers
         public ActionResult Cipher()
         {
             //update view with form that will work for a cipher
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Cipher(Cipher c)
+        {
+            var x = new Encrypt(c.SelectedBlender, c.myMessage, c.myKey);
+
+            ViewBag.Message = x.EncryptedMessage;
+            ViewBag.Key = x.Key;
             return View();
         }
     }

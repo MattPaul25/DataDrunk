@@ -12,40 +12,39 @@
 {
     @Html.AntiForgeryToken()
     
+    
     <div class="form-horizontal">
         <h4>Cipher</h4>
-        <hr />
+        <br />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.myMessage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.myMessage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.myMessage, new { @Value = ViewBag.Message }) 
                 @Html.ValidationMessageFor(model => model.myMessage, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
-            @Html.LabelFor(model => model.recipients, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.recipients, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.recipients, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.myKey, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-offset-2 col-md-10">
+                @Html.TextBoxFor(model => model.myKey, new { @Value = ViewBag.Key, @readonly = true })
             </div>
+
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.myPassword, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.myPassword, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.myPassword, "", new { @class = "text-danger" })
+        <div class="form-group">   
+                     
+            <div class="col-md-offset-2 col-md-10">
+                @Html.EnumDropDownListFor(model => model.SelectedBlender)
             </div>
         </div>
-
+    <br />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
-    </div>
+        </div>
 }
 
 <div>
